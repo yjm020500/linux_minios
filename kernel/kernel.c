@@ -5,6 +5,10 @@
 #include <readline/history.h>
 
 #include "system.h"
+#include "fork_ex.h"
+#include "Pi_cal.h"
+#include "RR_scheduler.h"
+
 void print_minios(char* str);
 
 int main() {
@@ -22,6 +26,18 @@ int main() {
 
         if (strcmp(input,"minisystem") == 0){
             minisystem();
+        }
+        else if (strcmp(input, "cal") == 0){
+            cal();
+        }
+        else if(strcmp(input, "fork_ex") == 0){
+            fork_ex();
+        }
+        else if(strcmp(input, "Pi_cal") == 0){
+            Pi_cal();
+        }
+        else if(strcmp(input, "RR_scheduling") == 0){
+            RR_scheduler();
         }
         else system(input);
     }

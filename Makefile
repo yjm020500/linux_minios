@@ -8,7 +8,7 @@ LDFLAGS=-lreadline
 TARGET=minios
 
 # Source, Object files
-SRCS=kernel/kernel.c kernel/system.c
+SRCS=kernel/kernel.c kernel/system.c kernel/20192513/fork_ex.c kernel/Pi_cal.c kernel/RR_scheduler.c
 OBJS=$(SRCS:.c=.o) 
 
 # Include directory
@@ -17,7 +17,7 @@ INCLUDE_DIR=include
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS) $(LDFLAGS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS) $(LDFLAGS) 
 
 # To obtain object files
 %.o: %.c
